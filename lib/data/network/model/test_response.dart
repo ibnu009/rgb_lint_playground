@@ -1,1 +1,1 @@
-class TestResponse{}
+class Test{}

@@ -6,15 +6,15 @@ import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
-class CorrectModelAnnotation extends DartLintRule {
-  CorrectModelAnnotation() : super(code: _code);
+class CorrectServiceAnnotation extends DartLintRule {
+  CorrectServiceAnnotation() : super(code: _code);
 
   static const _code = LintCode(
-      name: 'json_serializable_annotation_is_required',
+      name: 'rest_api_annotation_is_required',
       problemMessage:
-          "JsonSerializable Annotation is required to declare model for retrofit pattern.",
+          "RestApi Annotation is required to declare service for retrofit pattern.",
       correctionMessage:
-          "You have to add '@JsonSerializable()' on top of your model class");
+          "You have to add '@RestApi()' on top of your model class");
 
   @override
   void run(
@@ -29,7 +29,7 @@ class CorrectModelAnnotation extends DartLintRule {
         var fileName = declaredElement.source.uri.path;
         var classes = declaredElement.classes;
 
-        if (!fileName.isPathModel()) {
+        if (!fileName.isPathServices()) {
           return;
         }
 
@@ -43,7 +43,7 @@ class CorrectModelAnnotation extends DartLintRule {
             final classAnnotations = declaration.metadata;
             for (var annotation in classAnnotations) {
               final evaluatedAnnotation = annotation.name.name;
-              if (evaluatedAnnotation.contains('JsonSerializable')) {
+              if (evaluatedAnnotation.contains('RestApi')) {
                 isLintSatisfied = true;
               } else {
                 isLintSatisfied = false;
@@ -70,10 +70,10 @@ class CorrectModelAnnotation extends DartLintRule {
   }
 
   @override
-  List<Fix> getFixes() => [_AddJsonAnnotation()];
+  List<Fix> getFixes() => [_AddRestApiAnnotation()];
 }
 
-class _AddJsonAnnotation extends DartFix {
+class _AddRestApiAnnotation extends DartFix {
   @override
   void run(
     CustomLintResolver resolver,
@@ -85,19 +85,19 @@ class _AddJsonAnnotation extends DartFix {
     context.registry.addCompilationUnit((node) {
       var declaredElement = node.declaredElement;
       var classes = declaredElement?.classes;
-      int classLength = 'class '.length;
+      int classLength = 'abstract class '.length;
 
       if (classes == null || classes.isEmpty) return;
       var offset = classes.first.nameOffset;
 
       final changeBuilder = reporter.createChangeBuilder(
-        message: 'Add @JsonSerializable()',
+        message: 'Add @RestApi()',
         priority: 2,
       );
       changeBuilder.addDartFileEdit((builder) {
         builder.addSimpleReplacement(
           SourceRange(offset - classLength, 0),
-          '@JsonSerializable()\n',
+          '@RestApi()\n',
         );
       });
     });

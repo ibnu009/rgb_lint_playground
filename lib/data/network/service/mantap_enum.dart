@@ -1,4 +1,4 @@
-class ExampleTest{
+abstract class ExampleTest{
 
   static const casd = '';
   static const test_const_wrong_name = '';

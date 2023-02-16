@@ -5,13 +5,13 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/lint_type_constant.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
-class CorrectModelClassName extends DartLintRule {
-  CorrectModelClassName() : super(code: _code);
+class CorrectEnumClassName extends DartLintRule {
+  CorrectEnumClassName() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'incorrect_model_class_name',
-    problemMessage: "The class name isn't a correct name for model class. "
-        "Model class should only contains their name without prefixes. Example: Gift, User",
+    name: 'incorrect_enum_class_name',
+    problemMessage: "The class name isn't a correct name for enum class. "
+        "Enum class should only contains their name without prefixes. Example: GiftEnum",
   );
 
   @override
@@ -31,8 +31,8 @@ class CorrectModelClassName extends DartLintRule {
           var length = classInstance.nameLength;
           var name = classInstance.name;
 
-          if (fileName.isPathModel()) {
-            if (!name.isCorrectModelClassName()) {
+          if (fileName.isPathEnum()) {
+            if (!name.isCorrectClassEnumName()) {
               reporter.reportErrorForOffset(code, offset, length);
             }
           }
@@ -42,10 +42,10 @@ class CorrectModelClassName extends DartLintRule {
   }
 
   @override
-  List<Fix> getFixes() => [_RenameModelClass()];
+  List<Fix> getFixes() => [_RenameEnumsClass()];
 }
 
-class _RenameModelClass extends DartFix {
+class _RenameEnumsClass extends DartFix {
   @override
   void run(
     CustomLintResolver resolver,
@@ -60,7 +60,7 @@ class _RenameModelClass extends DartFix {
 
       if (classes == null || classes.isEmpty) return;
       var className = classes.first.name;
-      String correctName = className.rawClassName;
+      String correctName = className.renameClass(type: LintTypeConstant.enumLint);
 
       var offset = classes.first.nameOffset;
       var length = classes.first.nameLength;
