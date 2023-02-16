@@ -1,0 +1,24 @@
+name: rgb_flutter_lints
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+# dependencies:
+#   path: ^1.8.0
+
+dependencies:
+  analyzer: ^5.0.0
+  analyzer_plugin: ^0.11.2
+  custom_lint_builder: ^0.2.5
+  collection: 1.17.0
+  matcher: 0.12.13
+  meta: 1.8.0
+  path: 1.8.2
+
+dev_dependencies:
+  lints: ^2.0.0
+  custom_lint:
+
