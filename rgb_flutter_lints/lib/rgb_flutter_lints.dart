@@ -3,6 +3,7 @@ library rgb_flutter_lints;
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/rules/correct_base_response_import_.dart';
 import 'package:rgb_flutter_lints/rules/correct_enum_class_name.dart';
+import 'package:rgb_flutter_lints/rules/correct_json_model_implementation.dart';
 import 'package:rgb_flutter_lints/rules/correct_model_annotation.dart';
 import 'package:rgb_flutter_lints/rules/correct_model_class_name.dart';
 import 'package:rgb_flutter_lints/rules/correct_one_variable_for_lang.dart';
@@ -10,6 +11,7 @@ import 'package:rgb_flutter_lints/rules/correct_request_class_name.dart';
 import 'package:rgb_flutter_lints/rules/correct_request_file_name.dart';
 import 'package:rgb_flutter_lints/rules/correct_response_class_name.dart';
 import 'package:rgb_flutter_lints/rules/correct_response_file_name.dart';
+import 'package:rgb_flutter_lints/rules/prefer_nullable_model.dart';
 import 'package:rgb_flutter_lints/rules/prefer_single_class_per_file.dart';
 import 'package:rgb_flutter_lints/rules/prefer_static_const_lang_variable.dart';
 import 'package:rgb_flutter_lints/rules/prefer_upper_camel_case.dart';
@@ -28,9 +30,12 @@ class _RgbCustomLint extends PluginBase {
   List<LintRule> getLintRules(CustomLintConfigs configs) => [
     PreferFinalProviders(),
     PreferSingleClassPerFile(),
+
     CorrectModelFileName(),
     CorrectModelAnnotation(),
     CorrectModelClassName(),
+    CorrectJsonModelImplementation(),
+    PreferNullableModel(),
 
     CorrectServiceFileName(),
     CorrectServiceAnnotation(),
