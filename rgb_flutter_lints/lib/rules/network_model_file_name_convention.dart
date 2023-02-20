@@ -4,6 +4,8 @@ import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
+import '../helper/documentation_constants.dart';
+
 class NetworkModelFileNameConvention extends DartLintRule {
   NetworkModelFileNameConvention() : super(code: _code);
 
@@ -11,7 +13,7 @@ class NetworkModelFileNameConvention extends DartLintRule {
     name: 'network_model_file_name_convention',
     problemMessage:
         "⚠️The file name isn't a correct name for model file. file name should end with '_model'",
-    correctionMessage: 'Try changing the file name that ends with "_model". Example: user_model.dart',
+    correctionMessage: 'Try changing the file name that ends with "_model". Example: user_model.dart. \n\n See documentation:\n${DocumentationConstants.modelFileNameConvention}',
       errorSeverity: ErrorSeverity.WARNING
   );
 

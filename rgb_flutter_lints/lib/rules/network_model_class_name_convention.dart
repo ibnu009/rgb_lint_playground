@@ -5,6 +5,8 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/lint_type_constant.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
+import '../helper/documentation_constants.dart';
+
 class NetworkModelClassNameConvention extends DartLintRule {
   NetworkModelClassNameConvention() : super(code: _code);
 
@@ -12,6 +14,7 @@ class NetworkModelClassNameConvention extends DartLintRule {
     name: 'network_model_class_name_convention',
     problemMessage: "⚠️The class name isn't a correct name for model class. "
         "Model class should only contains their name without prefixes. Example: Gift, User",
+    correctionMessage: "See documentation:\n${DocumentationConstants.modelClassNameConvention}",
       errorSeverity: ErrorSeverity.WARNING
   );
 

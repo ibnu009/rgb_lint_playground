@@ -4,6 +4,7 @@ import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
+import 'package:rgb_flutter_lints/helper/documentation_constants.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
 class NetworkModelAnnotationConvention extends DartLintRule {
@@ -14,9 +15,8 @@ class NetworkModelAnnotationConvention extends DartLintRule {
       problemMessage:
           "⚠️JsonSerializable Annotation is required to declare model for retrofit pattern.",
       correctionMessage:
-          "You have to add '@JsonSerializable()' on top of your model class",
-      errorSeverity: ErrorSeverity.WARNING
-  );
+          "You have to add '@JsonSerializable()' on top of your model class. \n\n See documentation:\n${DocumentationConstants.modelAnnotationConvention}",
+      errorSeverity: ErrorSeverity.WARNING);
 
   @override
   void run(
