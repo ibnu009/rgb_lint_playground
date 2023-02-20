@@ -22,10 +22,10 @@ dev_dependencies:
 ## Convention
 
 #### Model Convention
-* [Model class name convention](#-model-class-name-convention)
-* [Model file name convention](#-model-file-name-convention)
-* [Model annotation convention](#-model-annotation-convention)
-* [Prefer nullable for models convention](#-prefer-nullable-for-models-convention)
+* [Model class name convention](#model-class-name-convention)
+* [Model file name convention](#model-file-name-convention)
+* [Model annotation convention](#model-annotation-convention)
+* [Prefer nullable for models convention](#prefer-nullable-for-models-convention)
 
 #### Service Convention
 * [Service class name convention](#1-service-class-name-convention)
