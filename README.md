@@ -184,6 +184,18 @@ Response file must always be put inside of response directory.
     |- response
 ~~~
 
+#### Network model json implementation convention
+Response class always end with "Response", and must use *PascalCase*.
+~~~dart
+//DO
+   factory Episode.fromJson(Map<String, dynamic> json) =>
+      _$EpisodeFromJson(json);
+  Map<String, dynamic> toJson() => _$EpisodeToJson(this);
+
+//DON'T
+// not implemented
+~~~
+
 #### Network base response import convention
 Both BaseResponse and BaseListResponse must be implemented and imported from rollingglory_codebase.
 ~~~dart
