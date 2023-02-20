@@ -8,34 +8,34 @@
 GloryConventionLint is judgment code for Convention lint in IDE Android Studio support Flutter.
 
 #### Model 
-* [Correct model class name](#1-correct-model-class-name)
-* [Correct model file name](#2-correct-model-file-name)
-* [Correct model annotation](#3-correct-model-annotation)
-* [Prefer nullable for models](#4-prefer-nullable-for-models)
+* [Model class name convention](#model-class-name-convention)
+* [Model file name convention](#model-file-name-convention)
+* [Model annotation convention](#model-annotation-convention)
+* [Prefer nullable for models](#prefer-nullable-for-models)
 
 #### Service
-* [Correct service class name](#1-correct-service-class-name)
-* [Correct service file name](#2-correct-service-file-name)
-* [Correct service annotation](#3-correct-service-annotation)
+* [Service class name convention](#service-class-name-convention)
+* [Service file name convention](#service-file-name-convention)
+* [Service annotation convention](#service-annotation-convention)
 
 #### Enum 
-* [Correct enum class name](#1-correct-enum-class-name)
-* [Correct enum file name](#2-correct-enum-file-name)
+* [Enum class name convention](#enum-class-name-convention)
+* [Enum file name convention](#enum-file-name-convention)
 
 #### Request 
-* [Correct request class name](#1-correct-request-class-name)
-* [Correct request file name](#2-correct-request-file-name)
+* [Request class name convention](#request-class-name-convention)
+* [Request file name convention](#request-file-name-convention)
 
 #### Response 
-* [Correct response class name](#1-correct-response-class-name)
-* [Correct response file name](#2-correct-response-file-name)
+* [Response class name convention](#response-class-name-convention)
+* [Response file name convention](#response-file-name-convention)
 
 #### Other 
-* [Naming Convention](#1-naming-convention)
-* [Prefer single class per file](#2-prefer-single-class-per-file)    
-* [Prefer static const lang variable](#3-prefer-static-const-lang-variable)    
-* [Correct base response import](#4-correct-base-response-import) 
-* [Correct one variable for lang](#5-prefer-one-variable-for-language) 
+* [Naming Convention](#naming-convention)
+* [Prefer single class per file](#prefer-single-class-per-file)    
+* [Prefer static const lang variable](#prefer-static-const-lang-variable)    
+* [Base response import convention](#base-response-import-convention) 
+* [One variable for lang convention](#prefer-one-variable-for-language) 
 
 &nbsp;
 ---
@@ -50,7 +50,7 @@ dev_dependencies:
 ## Conventions
 
 ### Model
-#### 1. Correct model class name 
+#### Model class name Convention
 Ensure to add Model word at the end of class name in models file
 ~~~dart
 //DO
@@ -58,7 +58,7 @@ class ProductModel {}
 //DON'T
 class ProductModel {}
 ~~~
-#### 2. Correct model file name 
+#### Model file name Convention
 The file name for models must end with _model.dart
 ~~~dart
 //DO
@@ -68,7 +68,7 @@ product.dart
 productmodel.dart
 ```
 ~~~
-#### 3. Correct model annotation
+#### Model annotation Convention
 Add @JsonSerializable() from Retrofit to above your class model name
 ~~~dart
 //DO
@@ -82,7 +82,7 @@ class ProductModel {
 }
 @JsonSerializable()
 ~~~
-#### 4. Prefer nullable for models 
+#### Prefer nullable for models 
 Fields of Model class is preferable to have nullable field. example : String? instead of String
 ~~~dart
 //DO
@@ -98,7 +98,7 @@ Fields of Model class is preferable to have nullable field. example : String? in
 ~~~
 
 ### Service
-#### 1. Correct service class name 
+#### Service class name Convention
 Ensure to add Services word at the end of class name in models file
 ~~~dart
 //DO
@@ -108,7 +108,7 @@ Ensure to add Services word at the end of class name in models file
   class Gift{}
   class ProductService{} // singular instead of plural
 ~~~
-#### 2. Correct service file name 
+#### Service file name Convention
 The file name for services must end with service.dart
 ~~~dart
 //DO
@@ -118,7 +118,7 @@ The file name for services must end with service.dart
   product_service.dart //singular instead of plural
   ProductRequest.dart
 ~~~
-#### 3. Correct service annotation
+#### Service annotation Convention
 Add @RestApi() from Retrofit to above your class service name
 ~~~dart
 //DO
@@ -130,7 +130,7 @@ abstract class ProductServices {}
 ~~~
 
 ### Enum
-#### 1. Correct enum class name
+#### Enum class name convention
 Ensure to add Enum word at the end of enum class name in the file.
 ~~~dart
 //DO
@@ -139,7 +139,7 @@ enum AvatarEnum {}
 enum EnumAvatar {}
 ~~~
 
-#### 2. Correct enum file name
+#### Enum file name convention
 Ensure to add _enum.dart prefix at the end of file name.
 ~~~dart
 //DO
@@ -150,7 +150,7 @@ Ensure to add _enum.dart prefix at the end of file name.
 ~~~
 
 ### Request
-#### 1. Correct request class name 
+#### Request class name convention
 Request class always end with "Request", and must use *PascalCase*.
 ~~~dart
 //DO
@@ -162,7 +162,7 @@ class Gift{}
 class product_request{}
 ~~~
 
-#### 2. Correct request file name 
+#### Request file name convention
 Request file must always end with "_request"  and should always use *snake_case* for file naming.
 ~~~
 //DO
@@ -179,7 +179,7 @@ Request file must always be put inside of request directory.
 ~~~
 &nbsp;
 ### Response
-#### 1. Correct response class name 
+#### Response class name convention
 Response class always end with "Response", and must use *PascalCase*.
 ~~~dart
 //DO
@@ -191,7 +191,7 @@ class Gift{}
 class product_response{}
 ~~~
 
-#### 2. Correct response file name 
+#### Response file name convention
 Response file must always end with "_response"  and should always use *snake_case* for file naming.
 ~~~
 //DO
@@ -209,7 +209,7 @@ Response file must always be put inside of response directory.
 
 &nbsp;
 ### Other
-#### 1. Naming Convention 
+#### Naming Convention 
 <table>
     <tbody>
         <tr>
@@ -313,7 +313,7 @@ Response file must always be put inside of response directory.
     </tbody>
 </table>
 
-#### 2. Prefer Single Class Per File
+#### Prefer Single Class Per File
 Avoid Declaring multiple classes in one file. It is best practice to declare one class in one file instead of multiple of class in one files, to reduce
 confusion. 
 ~~~dart
@@ -327,7 +327,7 @@ class One = {};
 class Two = {};
 ~~~
 
-#### 3. Prefer static const lang variable 
+#### Prefer static const lang variable 
 Declare variable as static const.
 ~~~dart
 //DO
@@ -341,7 +341,7 @@ class One {
 }
 ~~~
 
-#### 4. Correct base response import
+#### Base response import convention
 Both BaseResponse and BaseListResponse must be implemented and imported from rollingglory_codebase
 When an application communicates to the backend via API calls, we usually receive two type of responses. single object and multi objects.
 both types need to be implemented in service file, the service file is actually an abstract class that contains 
@@ -359,7 +359,7 @@ class One {
 }
 ~~~
 
-#### 5. Prefer one variable for language
+#### Prefer one variable for language
 Ensure to separate the variable that represents a language, one class is supposed to have one variable.
 
 ~~~dart
