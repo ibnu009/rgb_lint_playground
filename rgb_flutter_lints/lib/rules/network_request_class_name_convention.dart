@@ -17,7 +17,9 @@ class NetworkRequestClassNameConvention extends DartLintRule {
     name: 'network_request_class_name_convention',
     problemMessage:
         "⚠️The class name isn't a correct name for request class. Example : 'ExampleRequest'",
-    correctionMessage: 'Try changing the name that ends with "Request". \n\n See documentation:\n${DocumentationConstants.requestClassNameConvention}',
+    errorSeverity: ErrorSeverity.WARNING,
+    correctionMessage:
+        'Try changing the name that ends with "Request". \n\n See documentation:\n${DocumentationConstants.requestClassNameConvention}',
   );
 
   @override
@@ -52,6 +54,7 @@ class NetworkRequestClassNameConvention extends DartLintRule {
       },
     );
   }
+
   @override
   List<Fix> getFixes() => [_RenameRequestClassName()];
 }

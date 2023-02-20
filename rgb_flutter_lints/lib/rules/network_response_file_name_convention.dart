@@ -6,6 +6,7 @@ import 'package:analyzer/error/listener.dart';
 import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
+import '../helper/documentation_constants.dart';
 import '../helper/lint_type_constant.dart';
 
 class NetworkResponseFileNameConvention extends DartLintRule {
@@ -15,7 +16,8 @@ class NetworkResponseFileNameConvention extends DartLintRule {
     name: 'network_response_file_name_convention',
     problemMessage:
         "⚠️The file name '{0}' isn't a correct name for response file.",
-    correctionMessage: 'Try changing the name that ends with "_response".',
+    correctionMessage: 'Try changing the name that ends with "_response". \n\n "See documentation:\n${DocumentationConstants.requestFileNameConvention}"',
+    errorSeverity: ErrorSeverity.WARNING,
   );
 
   @override

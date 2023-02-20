@@ -3,9 +3,11 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:analyzer/dart/ast/token.dart';
+import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
+import '../helper/documentation_constants.dart';
 
 class PreferUpperCamelCase extends DartLintRule {
   PreferUpperCamelCase() : super(code: _code);
@@ -13,7 +15,8 @@ class PreferUpperCamelCase extends DartLintRule {
   static const _code = LintCode(
     name: 'prefer_upper_camel_case',
     problemMessage: "⚠️The type name '{0}' isn't an UpperCamelCase identifier.",
-    correctionMessage: 'Try changing the name to follow the UpperCamelCase style. example: GiftService',
+    correctionMessage: 'Try changing the name to follow the UpperCamelCase style. example: GiftService. \n\n See documentation:\n ${DocumentationConstants.preferUpperCamelCase}',
+    errorSeverity: ErrorSeverity.WARNING,
   );
 
   @override

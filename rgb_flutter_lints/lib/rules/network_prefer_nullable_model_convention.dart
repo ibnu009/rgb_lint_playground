@@ -3,13 +3,15 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
-class PreferNullableModel extends DartLintRule {
-  PreferNullableModel() : super(code: _code);
+import '../helper/documentation_constants.dart';
+
+class NetworkPreferNullableModel extends DartLintRule {
+  NetworkPreferNullableModel() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'prefer_nullable_model',
+    name: 'network_prefer_nullable_model_convention',
     problemMessage: '⚠️Implement nullable attributes for models',
-    correctionMessage: 'add nullable <ex:String?> to models\'s attributes',
+    correctionMessage: 'add nullable <ex:String?> to models\'s attributes. \n\n See documentation:\n${DocumentationConstants.preferNullableForModels}" ',
       errorSeverity: ErrorSeverity.WARNING
 
   );
