@@ -47,10 +47,6 @@ dev_dependencies:
 * [Prefer static const lang variable convention](#prefer-static-const-lang-variable-convention)    
 * [Prefer one variable for lang convention](#prefer-one-variable-for-language-convention) 
 
-
-&nbsp;
-## Example
-
 &nbsp;
 ---
 
@@ -63,7 +59,7 @@ class ProductModel {}
 //DON'T
 class ProductModel {}
 ~~~
-#### Model file name convention
+#### Network model file name convention
 The file name for models must end with _model.dart
 ~~~dart
 //DO
@@ -73,7 +69,7 @@ product.dart
 productmodel.dart
 ```
 ~~~
-#### Model annotation convention
+#### Network model annotation convention
 Add @JsonSerializable() from Retrofit to above your class model name
 ~~~dart
 //DO
@@ -87,7 +83,7 @@ class ProductModel {
 }
 @JsonSerializable()
 ~~~
-#### refer nullable for models convention
+#### Network nullable models convention
 Fields of Model class is preferable to have nullable field. example : String? instead of String
 ~~~dart
 //DO
@@ -102,8 +98,7 @@ Fields of Model class is preferable to have nullable field. example : String? in
 }
 ~~~
 
-#### Service Convention
-#### Service class name convention
+#### Network service class name convention
 Ensure to add Services word at the end of class name in models file
 ~~~dart
 //DO
@@ -113,7 +108,7 @@ Ensure to add Services word at the end of class name in models file
   class Gift{}
   class ProductService{} // singular instead of plural
 ~~~
-#### Service file name convention
+#### Network service file name convention
 The file name for services must end with service.dart
 ~~~dart
 //DO
@@ -123,7 +118,7 @@ The file name for services must end with service.dart
   product_service.dart //singular instead of plural
   ProductRequest.dart
 ~~~
-#### Service annotation convention
+#### Network service annotation convention
 Add @RestApi() from Retrofit to above your class service name
 ~~~dart
 //DO
@@ -132,6 +127,76 @@ abstract class ProductServices {}
 //DON'T
 //Forget to add RestApi Annotation
 abstract class ProductServices {}
+~~~
+#### Network request class name convention
+Request class always end with "Request", and must use *PascalCase*.
+~~~dart
+//DO
+class GiftRequest{}
+class ProductRequest{}
+
+//DON'T
+class Gift{}
+class product_request{}
+~~~
+
+#### Network request file name convention
+Request file must always end with "_request"  and should always use *snake_case* for file naming.
+~~~
+//DO
+product_request.dart
+//DON'T
+ProductRequest.dart
+~~~
+Request file must always be put inside of request directory.
+~~~
+|- data
+  |- network
+    |- request
+~~~
+&nbsp;
+
+#### Network response class name convention
+Response class always end with "Response", and must use *PascalCase*.
+~~~dart
+//DO
+class GiftResponse{}
+class ProductResponse{}
+
+//DON'T
+class Gift{}
+class product_response{}
+~~~
+
+#### Network response file name convention
+Response file must always end with "_response"  and should always use *snake_case* for file naming.
+~~~
+//DO
+product_response.dart
+
+//DON'T
+ProductResponse.dart
+~~~
+Response file must always be put inside of response directory.
+~~~
+|- data
+  |- network
+    |- response
+~~~
+
+#### Network base response import convention
+Both BaseResponse and BaseListResponse must be implemented and imported from rollingglory_codebase.
+~~~dart
+//DO
+class One {
+  Future<BaseListResponse<Episode>> getEpisodes();
+  Future<BaseResponse<Episode>> getEpisodeDetail();
+}
+
+//DON'T
+class One {
+  Future<Episode> myMethod();
+}
 ~~~
 
 #### Enum Convention
@@ -153,66 +218,15 @@ Ensure to add _enum.dart prefix at the end of file name.
 //DON'T
   ProductEnum.dart
 ~~~
-
-#### Request Convention
-#### Request class name convention
-Request class always end with "Request", and must use *PascalCase*.
+#### Prefer single enum per file convention
 ~~~dart
 //DO
-class GiftRequest{}
-class ProductRequest{}
-
+  gift_enum.dart
+  product_enum.dart
 //DON'T
-class Gift{}
-class product_request{}
+  ProductEnum.dart
 ~~~
 
-#### Request file name convention
-Request file must always end with "_request"  and should always use *snake_case* for file naming.
-~~~
-//DO
-product_request.dart
-
-//DON'T
-ProductRequest.dart
-~~~
-Request file must always be put inside of request directory.
-~~~
-|- data
-  |- network
-    |- request
-~~~
-&nbsp;
-#### Response Convention
-#### Response class name convention
-Response class always end with "Response", and must use *PascalCase*.
-~~~dart
-//DO
-class GiftResponse{}
-class ProductResponse{}
-
-//DON'T
-class Gift{}
-class product_response{}
-~~~
-
-#### Response file name convention
-Response file must always end with "_response"  and should always use *snake_case* for file naming.
-~~~
-//DO
-product_response.dart
-
-//DON'T
-ProductResponse.dart
-~~~
-Response file must always be put inside of response directory.
-~~~
-|- data
-  |- network
-    |- response
-~~~
-
-&nbsp; 
 #### Other Convention
 #### Naming Convention 
 <table>
@@ -346,23 +360,7 @@ class One {
 }
 ~~~
 
-#### Base response import convention
-Both BaseResponse and BaseListResponse must be implemented and imported from rollingglory_codebase
-When an application communicates to the backend via API calls, we usually receive two type of responses. single object and multi objects.
-both types need to be implemented in service file, the service file is actually an abstract class that contains 
-a set of methods which is needed in order to get data from API.
-~~~dart
-//DO
-class One {
-  Future<BaseListResponse<Episode>> getEpisodes();
-  Future<BaseResponse<Episode>> getEpisodeDetail();
-}
 
-//DON'T
-class One {
-  Future<Episode> myMethod();
-}
-~~~
 
 #### Prefer one variable for language convention
 Ensure to separate the variable that represents a language, one class is supposed to have one variable.
