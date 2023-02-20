@@ -3,6 +3,8 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
+import '../helper/documentation_constants.dart';
+
 class EnumFileNameConvention extends DartLintRule {
   EnumFileNameConvention() : super(code: _code);
 
@@ -10,7 +12,7 @@ class EnumFileNameConvention extends DartLintRule {
     name: 'enum_file_name_convention',
     problemMessage:
         "⚠️The file name isn't a correct name for enum file. file name should end with '_enum'",
-    correctionMessage: 'Try changing the file name that ends with "_enum". Example: user_enum.dart',
+    correctionMessage: 'Try changing the file name that ends with "_enum". Example: user_enum.dart. \n\n See documentation:\n${DocumentationConstants.enumFileNameConvention}',
     errorSeverity: ErrorSeverity.WARNING
   );
 

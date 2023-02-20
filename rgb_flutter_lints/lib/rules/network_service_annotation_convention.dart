@@ -6,6 +6,8 @@ import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
+import '../helper/documentation_constants.dart';
+
 //correct_network_service..
 
 class NetworkServiceAnnotationConvention extends DartLintRule {
@@ -16,9 +18,8 @@ class NetworkServiceAnnotationConvention extends DartLintRule {
       problemMessage:
           "⚠️RestApi Annotation is required to declare service for retrofit pattern.",
       correctionMessage:
-          "You have to add '@RestApi()' on top of your model class,",
-      errorSeverity: ErrorSeverity.WARNING
-  );
+          "You have to add '@RestApi()' on top of your model class, \n\n See documentation:\n${DocumentationConstants.serviceAnnotationConvention}",
+      errorSeverity: ErrorSeverity.WARNING);
 
   @override
   void run(

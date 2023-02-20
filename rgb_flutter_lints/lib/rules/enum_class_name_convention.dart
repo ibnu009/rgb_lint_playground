@@ -5,6 +5,8 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/lint_type_constant.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
+import '../helper/documentation_constants.dart';
+
 class EnumClassNameConvention extends DartLintRule {
   EnumClassNameConvention() : super(code: _code);
 
@@ -12,7 +14,8 @@ class EnumClassNameConvention extends DartLintRule {
     name: 'enum_class_name_convention',
     problemMessage: "⚠️The class name isn't a correct name for enum class. "
         "Enum class should only contains their name without prefixes. Example: GiftEnum",
-    errorSeverity: ErrorSeverity.WARNING
+    errorSeverity: ErrorSeverity.WARNING,
+    correctionMessage: "See documentation:\n${DocumentationConstants.modelAnnotationConvention}"
   );
 
   @override

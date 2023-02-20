@@ -7,6 +7,7 @@ import 'package:analyzer/error/listener.dart';
 import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
+import '../helper/documentation_constants.dart';
 import '../helper/lint_type_constant.dart';
 
 class NetworkRequestClassNameConvention extends DartLintRule {
@@ -16,7 +17,7 @@ class NetworkRequestClassNameConvention extends DartLintRule {
     name: 'network_request_class_name_convention',
     problemMessage:
         "⚠️The class name isn't a correct name for request class. Example : 'ExampleRequest'",
-    correctionMessage: 'Try changing the name that ends with "Request".',
+    correctionMessage: 'Try changing the name that ends with "Request". \n\n See documentation:\n${DocumentationConstants.requestClassNameConvention}',
   );
 
   @override
