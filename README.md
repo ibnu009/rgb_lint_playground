@@ -46,7 +46,6 @@ dev_dependencies:
 * [Prefer single class per file convention](#prefer-single-class-per-file-convention)    
 * [Prefer static const lang variable convention](#prefer-static-const-lang-variable-convention)    
 * [Prefer one variable for lang convention](#prefer-one-variable-for-language-convention) 
-* [Prefer single enum per file convention](#prefer-single-enum-per-file-convention) 
 
 &nbsp;
 ---
@@ -389,16 +388,6 @@ Map<String,String> en = {};
 -- languages.dart --
 Map<String,String> id = {};
 Map<String,String> en = {};
-~~~
-
-#### Prefer single enum per file convention
-Only one enum allowed per file.
-~~~dart
-//DO
-enum bookEnum {}
-//DON'T
-enum bookEnum {}
-enum eraserEnum {}
 ~~~
 
 ## Example
