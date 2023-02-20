@@ -5,11 +5,11 @@ import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
 import '../helper/documentation_constants.dart';
 
-class NetworkPreferNullableModel extends DartLintRule {
-  NetworkPreferNullableModel() : super(code: _code);
+class NetworkNullableModel extends DartLintRule {
+  NetworkNullableModel() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'network_prefer_nullable_model_convention',
+    name: 'network_nullable_model_convention',
     problemMessage: '⚠️Implement nullable attributes for models',
     correctionMessage:
         'add nullable <ex:String?> to models\'s attributes. \n\n See documentation:\n${DocumentationConstants.preferNullableForModelsConvention}" ',

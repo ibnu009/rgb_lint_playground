@@ -162,4 +162,14 @@ extension LintStringExt on String {
     final _camelCaseTester = RegExp(r'^_*(?:\$+_+)*[$?A-Z][$?a-zA-Z\d]*$');
     return _camelCaseTester.hasMatch(this);
   }
+
+  bool isFromJsonImplemented() {
+    RegExp regExp = RegExp(r".*FromJson.*");
+    return regExp.hasMatch(this);
+  }
+
+  bool isToJsonImplemented() {
+    RegExp regExp = RegExp(r".*ToJson.*");
+    return regExp.hasMatch(this);
+  }
 }

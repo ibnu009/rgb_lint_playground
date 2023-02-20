@@ -23,36 +23,27 @@ class NetworkModelJsonImplementationConvention extends DartLintRule {
     ErrorReporter reporter,
     CustomLintContext context,
   ) {
-    bool isFromJsonImplemented(CompilationUnitMember compilationUnitMember) {
-      if (compilationUnitMember.toString().contains('FromJson')) {
-        return true;
-      }
-      return false;
-    }
-
-    bool isToJsonImplemented(CompilationUnitMember compilationUnitMember) {
-      if (compilationUnitMember.toString().contains('ToJson')) {
-        return true;
-      }
-      return false;
-    }
-
     context.registry.addCompilationUnit(
       (node) {
         var declaredElement = node.declaredElement;
         var declarations = node.declarations;
         if (declaredElement != null && declarations.isNotEmpty) {
           var path = declaredElement.source.uri.path;
-
           if (path.isPathModel()) {
             for (var declaration in declarations) {
-              if (!isFromJsonImplemented(declaration)) {
+              if (!declaration.toString().isFromJsonImplemented()) {
                 reporter.reportErrorForOffset(
-                    code, declaration.offset, declaration.length);
+                  code,
+                  declaration.offset,
+                  declaration.length,
+                );
               }
-              if (!isToJsonImplemented(declaration)) {
+              if (!declaration.toString().isToJsonImplemented()) {
                 reporter.reportErrorForOffset(
-                    code, declaration.offset, declaration.length);
+                  code,
+                  declaration.offset,
+                  declaration.length,
+                );
               }
             }
           }

@@ -16,7 +16,7 @@ import 'package:rgb_flutter_lints/rules/network_response_file_name_convention.da
 import 'package:rgb_flutter_lints/rules/network_service_annotation_convention.dart';
 import 'package:rgb_flutter_lints/rules/network_service_class_name_convention.dart';
 import 'package:rgb_flutter_lints/rules/network_service_file_name_convention.dart';
-import 'package:rgb_flutter_lints/rules/network_prefer_nullable_model_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_nullable_model_convention.dart';
 import 'package:rgb_flutter_lints/rules/prefer_one_variable_for_lang_convention.dart';
 import 'package:rgb_flutter_lints/rules/prefer_single_class_per_file_convention.dart';
 import 'package:rgb_flutter_lints/rules/prefer_single_enum_per_file_convention.dart';
@@ -32,7 +32,7 @@ class _RgbCustomLint extends PluginBase {
     NetworkModelAnnotationConvention(),
     NetworkModelClassNameConvention(),
     NetworkModelJsonImplementationConvention(),
-    NetworkPreferNullableModel(),
+    NetworkNullableModel(),
 
     NetworkServiceAnnotationConvention(),
     NetworkServiceClassNameConvention(),
