@@ -199,7 +199,7 @@ class One {
 }
 ~~~
 
-#### Enum Convention
+#### &#10003; Enum Convention
 #### Enum class name convention
 Ensure to add Enum word at the end of enum class name in the file.
 ~~~dart
