@@ -383,6 +383,36 @@ Map<String,String> en = {};
 ~~~
 
 ## Example
+#### Model Convention
+#### Model class name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/model_class_convention.png"> </img>
+
+#### Model file name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/model_file_convention.png"> </img>
+
+#### Model annotation convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/model_annotation_convention.png"> </img>
+
+#### Prefer nullable for models convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/model_nullable_convention.png"> </img>
+
+
+#### Service Convention
+#### Service class name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/service_class_convention.png"> </img>
+
+#### Service file name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/service_file_convention.png"> </img>
+
+#### Service file name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/service_annotation_convention.png"> </img>
+
+#### Enum Convention
+#### Enum class name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/enum_class_convention.png"> </img>
+
+#### Enum file name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/enum_file_convention.png"> </img>
 
 ## Frequently Asked Questions
 #### Can this work for java and kotlin languages?
