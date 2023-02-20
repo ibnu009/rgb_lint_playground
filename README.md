@@ -28,28 +28,28 @@ dev_dependencies:
 * [Prefer nullable for models convention](#prefer-nullable-for-models-convention)
 
 #### Service Convention
-* [Service class name convention](#1-service-class-name-convention)
-* [Service file name convention](#2-service-file-name-convention)
-* [Service annotation convention](#3-service-annotation-convention)
+* [Service class name convention](#service-class-name-convention)
+* [Service file name convention](#service-file-name-convention)
+* [Service annotation convention](#service-annotation-convention)
 
 #### Enum Convention
-* [Enum class name convention](#1-enum-class-name-convention)
-* [Enum file name convention](#2-enum-file-name-convention)
+* [Enum class name convention](#enum-class-name-convention)
+* [Enum file name convention](#enum-file-name-convention)
 
 #### Request Convention
-* [Request class name convention](#1-request-class-name-convention)
-* [Request file name convention](#2-request-file-name-convention)
+* [Request class name convention](#request-class-name-convention)
+* [Request file name convention](#request-file-name-convention)
 
 #### Response Convention
-* [Response class name convention](#1-response-class-name-convention)
-* [Response file name convention](#2-response-file-name-convention)
+* [Response class name convention](#response-class-name-convention)
+* [Response file name convention](#response-file-name-convention)
 
 #### Other Convention
-* [Naming Convention](#1-naming-convention)
-* [Prefer single class per file convention](#2-prefer-single-class-per-file-convention)    
-* [Prefer static const lang variable convention](#3-prefer-static-const-lang-variable-convention)    
-* [Base response import convention](#4-correct-base-response-import-convention) 
-* [One variable for lang convention](#5-prefer-one-variable-for-language-convention) 
+* [Naming Convention](#naming-convention)
+* [Prefer single class per file convention](#prefer-single-class-per-file-convention)    
+* [Prefer static const lang variable convention](#prefer-static-const-lang-variable-convention)    
+* [Base response import convention](#base-response-import-convention) 
+* [One variable for lang convention](#prefer-one-variable-for-language-convention) 
 
 &nbsp;
 ---
