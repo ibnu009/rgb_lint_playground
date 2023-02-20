@@ -25,7 +25,7 @@ dev_dependencies:
 * [Network model class name convention](#network-model-class-name-convention)
 * [Network model file name convention](#network-model-file-name-convention)
 * [Network model annotation convention](#network-model-annotation-convention)
-* [Network nullable models convention](#network-nullable-for-models-convention)
+* [Network nullable models convention](#network-nullable-models-convention)
 * [Network service class name convention](#network-service-class-name-convention)
 * [Network service file name convention](#network-service-file-name-convention)
 * [Network service annotation convention](#network-service-annotation-convention)
