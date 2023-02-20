@@ -185,7 +185,7 @@ Response file must always be put inside of response directory.
 ~~~
 
 #### Network model json implementation convention
-Response class always end with "Response", and must use *PascalCase*.
+Ensure to write fromJson and toJson in every model file.
 ~~~dart
 //DO
    factory Episode.fromJson(Map<String, dynamic> json) =>
