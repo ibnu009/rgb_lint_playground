@@ -21,16 +21,17 @@ class EnumClassNameConvention extends DartLintRule {
     ErrorReporter reporter,
     CustomLintContext context,
   ) {
+
     context.registry.addCompilationUnit((node) {
       var declaredElement = node.declaredElement;
       if (declaredElement != null) {
         var fileName = declaredElement.source.uri.path;
-        var classes = declaredElement.classes;
+        var enums = declaredElement.enums;
 
-        for (var classInstance in classes) {
-          var offset = classInstance.nameOffset;
-          var length = classInstance.nameLength;
-          var name = classInstance.name;
+        for (var enumInstance in enums) {
+          var offset = enumInstance.nameOffset;
+          var length = enumInstance.nameLength;
+          var name = enumInstance.name;
 
           if (fileName.isPathEnum()) {
             if (!name.isCorrectClassEnumName()) {
@@ -57,14 +58,14 @@ class _RenameEnumsClass extends DartFix {
   ) {
     context.registry.addCompilationUnit((node) {
       var declaredElement = node.declaredElement;
-      var classes = declaredElement?.classes;
+      var enums = declaredElement?.enums;
 
-      if (classes == null || classes.isEmpty) return;
-      var className = classes.first.name;
+      if (enums == null || enums.isEmpty) return;
+      var className = enums.first.name;
       String correctName = className.renameClass(type: LintTypeConstant.enumLint);
 
-      var offset = classes.first.nameOffset;
-      var length = classes.first.nameLength;
+      var offset = enums.first.nameOffset;
+      var length = enums.first.nameLength;
 
       final changeBuilder = reporter.createChangeBuilder(
         message: 'Change to $correctName',

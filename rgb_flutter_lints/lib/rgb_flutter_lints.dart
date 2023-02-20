@@ -18,6 +18,7 @@ import 'package:rgb_flutter_lints/rules/network_service_class_name_convention.da
 import 'package:rgb_flutter_lints/rules/network_service_file_name_convention.dart';
 import 'package:rgb_flutter_lints/rules/prefer_nullable_model.dart';
 import 'package:rgb_flutter_lints/rules/prefer_single_class_per_file.dart';
+import 'package:rgb_flutter_lints/rules/prefer_single_enum_per_file.dart';
 import 'package:rgb_flutter_lints/rules/prefer_static_const_lang_variable.dart';
 import 'package:rgb_flutter_lints/rules/prefer_upper_camel_case.dart';
 
@@ -26,8 +27,6 @@ PluginBase createPlugin() => _RgbCustomLint();
 class _RgbCustomLint extends PluginBase {
   @override
   List<LintRule> getLintRules(CustomLintConfigs configs) => [
-    PreferSingleClassPerFile(),
-
     NetworkModelFileNameConvention(),
     NetworkModelAnnotationConvention(),
     NetworkModelClassNameConvention(),
@@ -52,5 +51,7 @@ class _RgbCustomLint extends PluginBase {
 
     PreferUpperCamelCase(),
     PreferStaticConstLangVariable(),
+    PreferSingleClassPerFile(),
+    PreferSingleEnumPerFile(),
   ];
 }
