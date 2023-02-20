@@ -33,7 +33,7 @@ dev_dependencies:
 * [Network request file name convention](#network-request-file-name-convention)
 * [Network response class name convention](#network-response-class-name-convention)
 * [Network response file name convention](#network-response-file-name-convention)
-* [Network model json implementation convention](#network_model_json_implementation_convention)
+* [Network model json implementation convention](#network-model-json-implementation-convention)
 * [Network base response import convention](#network-base-response-import-convention) 
 
 #### Enum Convention
