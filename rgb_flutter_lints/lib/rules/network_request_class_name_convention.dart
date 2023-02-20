@@ -9,11 +9,11 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
 import '../helper/lint_type_constant.dart';
 
-class CorrectRequestClassName extends DartLintRule {
-  CorrectRequestClassName() : super(code: _code);
+class NetworkRequestClassNameConvention extends DartLintRule {
+  NetworkRequestClassNameConvention() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'correct_request_class_name',
+    name: 'network_request_class_name_convention',
     problemMessage:
         "The class name isn't a correct name for request class. Example : 'ExampleRequest'",
     correctionMessage: 'Try changing the name that ends with "Request".',

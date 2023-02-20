@@ -6,11 +6,11 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
 
-class CorrectRequestFileName extends DartLintRule {
-  CorrectRequestFileName() : super(code: _code);
+class NetworkRequestFileNameConvention extends DartLintRule {
+  NetworkRequestFileNameConvention() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'correct_request_file_name',
+    name: 'network_request_file_name_convention',
     problemMessage: "The file name '{0}' isn't a correct name for request file.",
     correctionMessage: 'Try changing the name that ends with "_request".',
   );

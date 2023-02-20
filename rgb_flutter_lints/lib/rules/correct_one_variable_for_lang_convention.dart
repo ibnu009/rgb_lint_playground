@@ -5,11 +5,11 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
 
-class CorrectOneVariableForLang extends DartLintRule {
-  CorrectOneVariableForLang() : super(code: _notAllowed);
+class CorrectOneVariableForLangConvention extends DartLintRule {
+  CorrectOneVariableForLangConvention() : super(code: _notAllowed);
 
   static const _notAllowed = LintCode(
-    name: 'correct_one_variable_for_lang',
+    name: 'correct_one_variable_for_lang_convention',
     problemMessage: 'Only one variable is allowed for lang file',
     correctionMessage: 'Try to remove unnecessary variables',
   );

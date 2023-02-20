@@ -6,11 +6,11 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
 
-class CorrectBaseResponseImport extends DartLintRule {
-  CorrectBaseResponseImport() : super(code: _incorrectImport);
+class CorrectBaseResponseImportConvention extends DartLintRule {
+  CorrectBaseResponseImportConvention() : super(code: _incorrectImport);
 
   static const _incorrectImport = LintCode(
-    name: 'correct_base_response_import',
+    name: 'correct_base_response_import_convention',
     problemMessage:
         'The BaseResponse and BaseListResponse must be imported from rollingglory_codebase',
     correctionMessage: 'Try to correct the source of your base responses',

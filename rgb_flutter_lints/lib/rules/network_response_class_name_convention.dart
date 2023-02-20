@@ -10,11 +10,11 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
 import '../helper/lint_type_constant.dart';
 
-class CorrectResponseClassName extends DartLintRule {
-  CorrectResponseClassName() : super(code: _code);
+class NetworkResponseClassNameConvention extends DartLintRule {
+  NetworkResponseClassNameConvention() : super(code: _code);
 
   static const _code = LintCode(
-      name: 'correct_response_class_name',
+      name: 'network_response_class_name_convention',
       problemMessage:
           "The class name isn't a correct name for response class. Example : 'ExampleResponse'",
       correctionMessage: 'Try changing the name that ends with "Response".');
