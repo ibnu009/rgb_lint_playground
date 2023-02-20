@@ -22,27 +22,27 @@ dev_dependencies:
 ## Convention
 
 #### Model Convention
-* [Model class name convention](#1-correct-model-class-name-convention)
-* [Model file name convention](#2-correct-model-file-name-convention)
-* [Model annotation convention](#3-correct-model-annotation-convention)
+* [Model class name convention](#1-model-class-name-convention)
+* [Model file name convention](#2-model-file-name-convention)
+* [Model annotation convention](#3-model-annotation-convention)
 * [Prefer nullable for models convention](#4-prefer-nullable-for-models-convention)
 
 #### Service Convention
-* [Service class name convention](#1-correct-service-class-name-convention)
-* [Service file name convention](#2-correct-service-file-name-convention)
-* [Service annotation convention](#3-correct-service-annotation-convention)
+* [Service class name convention](#1-service-class-name-convention)
+* [Service file name convention](#2-service-file-name-convention)
+* [Service annotation convention](#3-service-annotation-convention)
 
 #### Enum Convention
-* [Enum class name convention](#1-correct-enum-class-name-convention)
-* [Enum file name convention](#2-correct-enum-file-name-convention)
+* [Enum class name convention](#1-enum-class-name-convention)
+* [Enum file name convention](#2-enum-file-name-convention)
 
 #### Request Convention
-* [Request class name convention](#1-correct-request-class-name-convention)
-* [Request file name convention](#2-correct-request-file-name-convention)
+* [Request class name convention](#1-request-class-name-convention)
+* [Request file name convention](#2-request-file-name-convention)
 
 #### Response Convention
-* [Response class name convention](#1-correct-response-class-name-convention)
-* [Response file name convention](#2-correct-response-file-name-convention)
+* [Response class name convention](#1-response-class-name-convention)
+* [Response file name convention](#2-response-file-name-convention)
 
 #### Other Convention
 * [Naming Convention](#1-naming-convention)
