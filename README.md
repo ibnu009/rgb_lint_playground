@@ -50,7 +50,7 @@ dev_dependencies:
 &nbsp;
 ---
 
-#### Network Convention
+#### &#9733; Network Convention
 #### Network model class name convention
 Ensure to add Model word at the end of class name in models file
 ~~~dart
@@ -199,7 +199,7 @@ class One {
 }
 ~~~
 
-#### &#10003; Enum Convention
+#### &#9733; Enum Convention
 #### Enum class name convention
 Ensure to add Enum word at the end of enum class name in the file.
 ~~~dart
@@ -227,7 +227,7 @@ Ensure to add _enum.dart prefix at the end of file name.
   ProductEnum.dart
 ~~~
 
-#### Other Convention
+#### &#9733; Other Convention
 #### Naming Convention 
 <table>
     <tbody>
@@ -359,8 +359,6 @@ class One {
   String variableOne = "Value";
 }
 ~~~
-
-
 
 #### Prefer one variable for language convention
 Ensure to separate the variable that represents a language, one class is supposed to have one variable.
