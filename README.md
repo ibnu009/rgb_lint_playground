@@ -22,34 +22,34 @@ dev_dependencies:
 ## Convention
 
 #### Model Convention
-* [Correct model class name convention](#1-correct-model-class-name-convention)
-* [Correct model file name convention](#2-correct-model-file-name-convention)
-* [Correct model annotation convention](#3-correct-model-annotation-convention)
+* [Model class name convention](#1-correct-model-class-name-convention)
+* [Model file name convention](#2-correct-model-file-name-convention)
+* [Model annotation convention](#3-correct-model-annotation-convention)
 * [Prefer nullable for models convention](#4-prefer-nullable-for-models-convention)
 
 #### Service Convention
-* [Correct service class name convention](#1-correct-service-class-name-convention)
-* [Correct service file name convention](#2-correct-service-file-name-convention)
-* [Correct service annotation convention](#3-correct-service-annotation-convention)
+* [Service class name convention](#1-correct-service-class-name-convention)
+* [Service file name convention](#2-correct-service-file-name-convention)
+* [Service annotation convention](#3-correct-service-annotation-convention)
 
 #### Enum Convention
-* [Correct enum class name convention](#1-correct-enum-class-name-convention)
-* [Correct enum file name convention](#2-correct-enum-file-name-convention)
+* [Enum class name convention](#1-correct-enum-class-name-convention)
+* [Enum file name convention](#2-correct-enum-file-name-convention)
 
 #### Request Convention
-* [Correct request class name convention](#1-correct-request-class-name-convention)
-* [Correct request file name convention](#2-correct-request-file-name-convention)
+* [Request class name convention](#1-correct-request-class-name-convention)
+* [Request file name convention](#2-correct-request-file-name-convention)
 
 #### Response Convention
-* [Correct response class name convention](#1-correct-response-class-name-convention)
-* [Correct response file name convention](#2-correct-response-file-name-convention)
+* [Response class name convention](#1-correct-response-class-name-convention)
+* [Response file name convention](#2-correct-response-file-name-convention)
 
 #### Other Convention
 * [Naming Convention](#1-naming-convention)
 * [Prefer single class per file convention](#2-prefer-single-class-per-file-convention)    
 * [Prefer static const lang variable convention](#3-prefer-static-const-lang-variable-convention)    
-* [Correct base response import convention](#4-correct-base-response-import-convention) 
-* [Correct one variable for lang convention](#5-prefer-one-variable-for-language-convention) 
+* [Base response import convention](#4-correct-base-response-import-convention) 
+* [One variable for lang convention](#5-prefer-one-variable-for-language-convention) 
 
 &nbsp;
 ---
