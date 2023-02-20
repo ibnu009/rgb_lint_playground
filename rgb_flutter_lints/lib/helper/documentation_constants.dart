@@ -9,7 +9,7 @@ class DocumentationConstants {
       "${baseDocumentationUrl}network-model-file-name-convention";
   static const modelAnnotationConvention =
       "${baseDocumentationUrl}network-model-annotation-convention";
-  static const preferNullableForModels =
+  static const preferNullableForModelsConvention =
       "${baseDocumentationUrl}prefer-nullable-for-model";
 
   static const serviceClassNameConvention =
@@ -20,9 +20,11 @@ class DocumentationConstants {
       "${baseDocumentationUrl}network-service-annotation-convention";
 
   static const enumClassNameConvention =
-      "${baseDocumentationUrl}network-enum-class-name-convention";
+      "${baseDocumentationUrl}enum-class-name-convention";
   static const enumFileNameConvention =
-      "${baseDocumentationUrl}network-enum-file-name-convention";
+      "${baseDocumentationUrl}enum-file-name-convention";
+  static const preferSingleEnumConvention =
+      "${baseDocumentationUrl}prefer_single_enum_per_file_convention";
 
   static const requestClassNameConvention =
       "${baseDocumentationUrl}network-request-class-name-convention";
@@ -35,17 +37,17 @@ class DocumentationConstants {
       "${baseDocumentationUrl}network-response-file-name-convention";
 
   static const namingConvention = "${baseDocumentationUrl}naming-convention";
-  static const preferSingleClassPerFile =
+  static const preferSingleClassPerFileConvention =
       "${baseDocumentationUrl}prefer-single-class-per-file";
-  static const preferStaticConstLangVariable =
+  static const preferStaticConstLangVariableConvention =
       "${baseDocumentationUrl}prefer-static-const-lang-variable";
 
   static const baseResponseImportConvention =
       "${baseDocumentationUrl}network-base-response-import-convention";
-  static const preferOneVariableForLanguage =
+  static const preferOneVariableForLanguageConvention =
       "${baseDocumentationUrl}prefer-one-variable-for-language";
-  static const preferModelJsonImplementation =
+  static const preferModelJsonImplementationConvention =
       "${baseDocumentationUrl}network_model_json_implementation_convention";
-  static const preferUpperCamelCase =
+  static const preferUpperCamelCaseConvention =
       "${baseDocumentationUrl}prefer_upper_camel_case_convention";
 }

@@ -13,7 +13,7 @@ class NetworkModelJsonImplementationConvention extends DartLintRule {
     name: 'network_model_json_implementation_convention',
     problemMessage: '⚠️Method toJson or fromJson is not implemented',
     correctionMessage:
-        'See documentation:\n${DocumentationConstants.modelClassNameConvention}',
+        'See documentation:\n${DocumentationConstants.preferModelJsonImplementationConvention}',
     errorSeverity: ErrorSeverity.WARNING,
   );
 

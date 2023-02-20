@@ -1,6 +1,5 @@
 import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
-import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
@@ -13,9 +12,9 @@ class NetworkServiceFileNameConvention extends DartLintRule {
     name: 'network_service_file_name_convention',
     problemMessage:
         "⚠️The file name isn't a correct name for services file. file name should end with '_services'",
-    correctionMessage: 'Try changing the file name that ends with "_services". Example: user_services.dart. \n\n See documentation:\n${DocumentationConstants.serviceFileNameConvention}',
-      errorSeverity: ErrorSeverity.WARNING
-
+    correctionMessage:
+        'Try changing the file name that ends with "_services". Example: user_services.dart. \n\n See documentation:\n${DocumentationConstants.serviceFileNameConvention}',
+    errorSeverity: ErrorSeverity.WARNING,
   );
 
   @override
@@ -30,7 +29,7 @@ class NetworkServiceFileNameConvention extends DartLintRule {
         var fileName = declaredElement.source.uri.path;
         var classes = declaredElement.classes;
 
-        if (classes.isEmpty){
+        if (classes.isEmpty) {
           if (fileName.isPathServices()) {
             if (!fileName.isCorrectFileServiceName()) {
               reporter.reportErrorForOffset(code, 0, 0);

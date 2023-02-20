@@ -13,8 +13,10 @@ class NetworkRequestFileNameConvention extends DartLintRule {
 
   static const _code = LintCode(
     name: 'network_request_file_name_convention',
-    problemMessage: "⚠️The file name '{0}' isn't a correct name for request file.",
-    correctionMessage: 'Try changing the name that ends with "_request". \n\n See documentation:\n${DocumentationConstants.requestFileNameConvention}',
+    problemMessage:
+        "⚠️The file name '{0}' isn't a correct name for request file.",
+    correctionMessage:
+        'Try changing the name that ends with "_request". \n\n See documentation:\n${DocumentationConstants.requestFileNameConvention}',
     errorSeverity: ErrorSeverity.WARNING,
   );
 

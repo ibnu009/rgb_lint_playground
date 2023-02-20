@@ -13,7 +13,8 @@ class PreferOneVariableForLangConvention extends DartLintRule {
   static const _code = LintCode(
     name: 'prefer_one_variable_for_lang_convention',
     problemMessage: '⚠️Only one variable is allowed for lang file',
-    correctionMessage: 'Try to remove unnecessary variables. \n\n See documentation:\n${DocumentationConstants.preferOneVariableForLanguage}',
+    correctionMessage:
+        'Try to remove unnecessary variables. \n\n See documentation:\n${DocumentationConstants.preferOneVariableForLanguageConvention}',
     errorSeverity: ErrorSeverity.WARNING,
   );
 
@@ -45,4 +46,3 @@ class PreferOneVariableForLangConvention extends DartLintRule {
     );
   }
 }
-

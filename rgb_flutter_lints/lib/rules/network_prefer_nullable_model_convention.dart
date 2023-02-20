@@ -11,17 +11,17 @@ class NetworkPreferNullableModel extends DartLintRule {
   static const _code = LintCode(
     name: 'network_prefer_nullable_model_convention',
     problemMessage: '⚠️Implement nullable attributes for models',
-    correctionMessage: 'add nullable <ex:String?> to models\'s attributes. \n\n See documentation:\n${DocumentationConstants.preferNullableForModels}" ',
-      errorSeverity: ErrorSeverity.WARNING
-
+    correctionMessage:
+        'add nullable <ex:String?> to models\'s attributes. \n\n See documentation:\n${DocumentationConstants.preferNullableForModelsConvention}" ',
+    errorSeverity: ErrorSeverity.WARNING,
   );
 
   @override
   void run(
-      CustomLintResolver resolver,
-      ErrorReporter reporter,
-      CustomLintContext context,
-      ) {
+    CustomLintResolver resolver,
+    ErrorReporter reporter,
+    CustomLintContext context,
+  ) {
     context.registry.addCompilationUnit((node) {
       var declaredElement = node.declaredElement;
       if (declaredElement != null) {
@@ -30,7 +30,8 @@ class NetworkPreferNullableModel extends DartLintRule {
           for (var element in declaredElement.classes) {
             for (var field in element.fields) {
               if (!field.toString().isCorrectVariableNullable()) {
-                reporter.reportErrorForOffset(code, field.nameOffset, field.nameLength);
+                reporter.reportErrorForOffset(
+                    code, field.nameOffset, field.nameLength);
               }
             }
           }

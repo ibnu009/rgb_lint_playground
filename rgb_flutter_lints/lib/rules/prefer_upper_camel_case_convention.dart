@@ -13,9 +13,10 @@ class PreferUpperCamelCase extends DartLintRule {
   PreferUpperCamelCase() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'prefer_upper_camel_case',
+    name: 'prefer_upper_camel_case_convention',
     problemMessage: "⚠️The type name '{0}' isn't an UpperCamelCase identifier.",
-    correctionMessage: 'Try changing the name to follow the UpperCamelCase style. example: GiftService. \n\n See documentation:\n ${DocumentationConstants.preferUpperCamelCase}',
+    correctionMessage:
+        'Try changing the name to follow the UpperCamelCase style. example: GiftService. \n\n See documentation:\n ${DocumentationConstants.preferUpperCamelCaseConvention}',
     errorSeverity: ErrorSeverity.WARNING,
   );
 

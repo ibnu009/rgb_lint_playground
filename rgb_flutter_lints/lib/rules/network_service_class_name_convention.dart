@@ -12,11 +12,10 @@ class NetworkServiceClassNameConvention extends DartLintRule {
 
   static const _code = LintCode(
     name: 'network_service_class_name_convention',
-    problemMessage: "⚠️The class name isn't a correct name for service class. "
-        "Services class should end with 'Services'. Example: GiftServices",
-      errorSeverity: ErrorSeverity.WARNING,
-    correctionMessage: "See documentation:\n${DocumentationConstants.serviceClassNameConvention}"
-
+    problemMessage: "⚠️The class name isn't a correct name for service class. ",
+    errorSeverity: ErrorSeverity.WARNING,
+    correctionMessage:
+        "Services class should end with 'Services'. Example: GiftServices. \n\n See documentation:\n${DocumentationConstants.serviceClassNameConvention}",
   );
 
   @override
@@ -65,7 +64,8 @@ class _RenameServicesClass extends DartFix {
 
       if (classes == null || classes.isEmpty) return;
       var className = classes.first.name;
-      String correctName = className.renameClass(type: LintTypeConstant.serviceLint);
+      String correctName =
+          className.renameClass(type: LintTypeConstant.serviceLint);
 
       var offset = classes.first.nameOffset;
       var length = classes.first.nameLength;
