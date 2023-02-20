@@ -39,13 +39,14 @@ dev_dependencies:
 #### Enum Convention
 * [Enum class name convention](#enum-class-name-convention)
 * [Enum file name convention](#enum-file-name-convention)
+* [Prefer single enum per file convention](#prefer_single_enum_per_file_convention) 
 
 #### Other Convention
 * [Naming Convention](#naming-convention)
 * [Prefer single class per file convention](#prefer-single-class-per-file-convention)    
 * [Prefer static const lang variable convention](#prefer-static-const-lang-variable-convention)    
 * [Prefer one variable for lang convention](#prefer-one-variable-for-language-convention) 
-* [Prefer single enum per file convention](#prefer_single_enum_per_file_convention) 
+
 
 &nbsp;
 ## Example
@@ -53,8 +54,8 @@ dev_dependencies:
 &nbsp;
 ---
 
-#### Model Convention
-#### Model class name convention
+#### Network Convention
+#### Network model class name convention
 Ensure to add Model word at the end of class name in models file
 ~~~dart
 //DO
