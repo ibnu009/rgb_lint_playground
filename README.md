@@ -39,7 +39,7 @@ dev_dependencies:
 #### Enum Convention
 * [Enum class name convention](#enum-class-name-convention)
 * [Enum file name convention](#enum-file-name-convention)
-* [Prefer single enum per file convention](#prefer_single_enum_per_file_convention) 
+* [Prefer single enum per file convention](#prefer-single-enum-per-file-convention) 
 
 #### Other Convention
 * [Naming Convention](#naming-convention)
