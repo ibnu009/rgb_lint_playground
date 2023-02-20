@@ -10,7 +10,7 @@ class NetworkModelFileNameConvention extends DartLintRule {
   static const _code = LintCode(
     name: 'network_model_file_name_convention',
     problemMessage:
-        "The file name isn't a correct name for model file. file name should end with '_model'",
+        "⚠️The file name isn't a correct name for model file. file name should end with '_model'",
     correctionMessage: 'Try changing the file name that ends with "_model". Example: user_model.dart',
       errorSeverity: ErrorSeverity.WARNING
   );

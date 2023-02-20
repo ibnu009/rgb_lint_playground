@@ -8,7 +8,7 @@ class PreferNullableModel extends DartLintRule {
 
   static const _code = LintCode(
     name: 'prefer_nullable_model',
-    problemMessage: 'Implement nullable attributes for models',
+    problemMessage: '⚠️Implement nullable attributes for models',
     correctionMessage: 'add nullable <ex:String?> to models\'s attributes',
       errorSeverity: ErrorSeverity.WARNING
 

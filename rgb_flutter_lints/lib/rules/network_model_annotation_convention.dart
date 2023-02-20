@@ -12,7 +12,7 @@ class NetworkModelAnnotationConvention extends DartLintRule {
   static const _code = LintCode(
       name: 'network_model_annotation_convention',
       problemMessage:
-          "JsonSerializable Annotation is required to declare model for retrofit pattern.",
+          "⚠️JsonSerializable Annotation is required to declare model for retrofit pattern.",
       correctionMessage:
           "You have to add '@JsonSerializable()' on top of your model class",
       errorSeverity: ErrorSeverity.WARNING

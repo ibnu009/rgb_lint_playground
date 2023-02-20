@@ -10,7 +10,7 @@ class EnumClassNameConvention extends DartLintRule {
 
   static const _code = LintCode(
     name: 'enum_class_name_convention',
-    problemMessage: "The class name isn't a correct name for enum class. "
+    problemMessage: "⚠️The class name isn't a correct name for enum class. "
         "Enum class should only contains their name without prefixes. Example: GiftEnum",
     errorSeverity: ErrorSeverity.WARNING
   );

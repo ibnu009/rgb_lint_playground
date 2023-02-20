@@ -9,7 +9,7 @@ class NetworkModelJsonImplementationConvention extends DartLintRule {
 
   static const _code = LintCode(
       name: 'network_nodel_json_implementation_convention',
-      problemMessage: 'Method toJson or fromJson is not implemented',
+      problemMessage: '⚠️Method toJson or fromJson is not implemented',
       correctionMessage: 'Add toJson method and fromJson method',
       errorSeverity: ErrorSeverity.WARNING
   );

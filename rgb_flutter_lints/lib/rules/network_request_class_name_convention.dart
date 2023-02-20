@@ -15,7 +15,7 @@ class NetworkRequestClassNameConvention extends DartLintRule {
   static const _code = LintCode(
     name: 'network_request_class_name_convention',
     problemMessage:
-        "The class name isn't a correct name for request class. Example : 'ExampleRequest'",
+        "⚠️The class name isn't a correct name for request class. Example : 'ExampleRequest'",
     correctionMessage: 'Try changing the name that ends with "Request".',
   );
 

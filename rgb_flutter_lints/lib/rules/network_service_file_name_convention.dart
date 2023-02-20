@@ -10,7 +10,7 @@ class NetworkServiceFileNameConvention extends DartLintRule {
   static const _code = LintCode(
     name: 'network_service_file_name_convention',
     problemMessage:
-        "The file name isn't a correct name for services file. file name should end with '_services'",
+        "⚠️The file name isn't a correct name for services file. file name should end with '_services'",
     correctionMessage: 'Try changing the file name that ends with "_services". Example: user_services.dart',
       errorSeverity: ErrorSeverity.WARNING
 

@@ -14,7 +14,7 @@ class NetworkResponseFileNameConvention extends DartLintRule {
   static const _code = LintCode(
     name: 'network_response_file_name_convention',
     problemMessage:
-        "The file name '{0}' isn't a correct name for response file.",
+        "⚠️The file name '{0}' isn't a correct name for response file.",
     correctionMessage: 'Try changing the name that ends with "_response".',
   );
 

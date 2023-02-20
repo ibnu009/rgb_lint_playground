@@ -9,7 +9,7 @@ class EnumFileNameConvention extends DartLintRule {
   static const _code = LintCode(
     name: 'enum_file_name_convention',
     problemMessage:
-        "The file name isn't a correct name for enum file. file name should end with '_enum'",
+        "⚠️The file name isn't a correct name for enum file. file name should end with '_enum'",
     correctionMessage: 'Try changing the file name that ends with "_enum". Example: user_enum.dart',
     errorSeverity: ErrorSeverity.WARNING
   );

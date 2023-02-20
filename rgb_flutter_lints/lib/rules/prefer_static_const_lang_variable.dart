@@ -11,7 +11,7 @@ class PreferStaticConstLangVariable extends DartLintRule {
 
   static const _code = LintCode(
       name: 'prefer_static_const_lang_variable',
-      problemMessage: 'It is better to use static const variables.',
+      problemMessage: '⚠️It is better to use static const variables.',
       correctionMessage: 'Try add static const to the variable.');
 
   @override

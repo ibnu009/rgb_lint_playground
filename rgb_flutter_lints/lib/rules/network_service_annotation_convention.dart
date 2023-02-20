@@ -14,7 +14,7 @@ class NetworkServiceAnnotationConvention extends DartLintRule {
   static const _code = LintCode(
       name: 'network_service_annotation_convention',
       problemMessage:
-          "RestApi Annotation is required to declare service for retrofit pattern.",
+          "⚠️RestApi Annotation is required to declare service for retrofit pattern.",
       correctionMessage:
           "You have to add '@RestApi()' on top of your model class,",
       errorSeverity: ErrorSeverity.WARNING

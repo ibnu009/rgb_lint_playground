@@ -12,8 +12,9 @@ class CorrectBaseResponseImportConvention extends DartLintRule {
   static const _incorrectImport = LintCode(
     name: 'correct_base_response_import_convention',
     problemMessage:
-        'The BaseResponse and BaseListResponse must be imported from rollingglory_codebase',
+        '⚠️The BaseResponse and BaseListResponse must be imported from rollingglory_codebase',
     correctionMessage: 'Try to correct the source of your base responses',
+      errorSeverity: ErrorSeverity.WARNING
   );
 
   static const _baseNotImplementedError = LintCode(

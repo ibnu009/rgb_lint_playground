@@ -10,7 +10,7 @@ class CorrectOneVariableForLangConvention extends DartLintRule {
 
   static const _notAllowed = LintCode(
     name: 'correct_one_variable_for_lang_convention',
-    problemMessage: 'Only one variable is allowed for lang file',
+    problemMessage: '⚠️Only one variable is allowed for lang file',
     correctionMessage: 'Try to remove unnecessary variables',
   );
 

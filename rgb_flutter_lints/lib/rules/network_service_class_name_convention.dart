@@ -10,7 +10,7 @@ class NetworkServiceClassNameConvention extends DartLintRule {
 
   static const _code = LintCode(
     name: 'network_service_class_name_convention',
-    problemMessage: "The class name isn't a correct name for service class. "
+    problemMessage: "⚠️The class name isn't a correct name for service class. "
         "Services class should end with 'Services'. Example: GiftServices",
       errorSeverity: ErrorSeverity.WARNING
 

@@ -16,7 +16,7 @@ class NetworkResponseClassNameConvention extends DartLintRule {
   static const _code = LintCode(
       name: 'network_response_class_name_convention',
       problemMessage:
-          "The class name isn't a correct name for response class. Example : 'ExampleResponse'",
+          "⚠️The class name isn't a correct name for response class. Example : 'ExampleResponse'",
       correctionMessage: 'Try changing the name that ends with "Response".');
 
   @override

@@ -10,7 +10,7 @@ class NetworkModelClassNameConvention extends DartLintRule {
 
   static const _code = LintCode(
     name: 'network_model_class_name_convention',
-    problemMessage: "The class name isn't a correct name for model class. "
+    problemMessage: "⚠️The class name isn't a correct name for model class. "
         "Model class should only contains their name without prefixes. Example: Gift, User",
       errorSeverity: ErrorSeverity.WARNING
   );
