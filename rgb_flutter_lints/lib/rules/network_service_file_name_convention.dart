@@ -4,14 +4,16 @@ import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
-class CorrectServiceFileName extends DartLintRule {
-  CorrectServiceFileName() : super(code: _code);
+class NetworkServiceFileNameConvention extends DartLintRule {
+  NetworkServiceFileNameConvention() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'incorrect_service_file_name',
+    name: 'network_service_file_name_convention',
     problemMessage:
         "The file name isn't a correct name for services file. file name should end with '_services'",
-    correctionMessage: 'Try changing the file name that ends with "_services". Example: user_services.dart'
+    correctionMessage: 'Try changing the file name that ends with "_services". Example: user_services.dart',
+      errorSeverity: ErrorSeverity.WARNING
+
   );
 
   @override

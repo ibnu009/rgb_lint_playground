@@ -1,15 +1,18 @@
 import 'package:analyzer/dart/ast/ast.dart';
+import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
-class CorrectJsonModelImplementation extends DartLintRule {
-  CorrectJsonModelImplementation() : super(code: _code);
+class NetworkModelJsonImplementationConvention extends DartLintRule {
+  NetworkModelJsonImplementationConvention() : super(code: _code);
 
   static const _code = LintCode(
-      name: 'correct_json_model_implementation',
+      name: 'network_nodel_json_implementation_convention',
       problemMessage: 'Method toJson or fromJson is not implemented',
-      correctionMessage: 'Add toJson method and fromJson method');
+      correctionMessage: 'Add toJson method and fromJson method',
+      errorSeverity: ErrorSeverity.WARNING
+  );
 
   @override
   void run(

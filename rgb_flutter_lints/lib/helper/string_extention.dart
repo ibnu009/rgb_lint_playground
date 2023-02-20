@@ -134,16 +134,7 @@ extension LintStringExt on String {
   }
 
   String renameClass({required String type}) {
-    List<String> words = split(RegExp(r'(?=[A-Z])'));
-    words.removeWhere((w) {
-      if (w == "Service") return true;
-      if (w == "Enum") return true;
-      if (w == "Constant") return true;
-      if (w == "Response") return true;
-      if (w == "Request") return true;
-      return false;
-    });
-    String rawClassName = words.join();
+    String rawClassName = this.rawClassName;
     String newClassName = rawClassName + type;
     return newClassName;
   }
@@ -151,9 +142,9 @@ extension LintStringExt on String {
   String get rawClassName {
     List<String> words = split(RegExp(r'(?=[A-Z])'));
     words.removeWhere((w) {
-      if (w == "Service") return true;
-      if (w == "Enum") return true;
-      if (w == "Constant") return true;
+      if (w == "Service" || w == "Services") return true;
+      if (w == "Enum" || w == "Enums") return true;
+      if (w == "Constant" || w == "Constants") return true;
       if (w == "Response") return true;
       if (w == "Request") return true;
       return false;

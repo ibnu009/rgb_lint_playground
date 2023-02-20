@@ -5,13 +5,15 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/lint_type_constant.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
-class CorrectServiceClassName extends DartLintRule {
-  CorrectServiceClassName() : super(code: _code);
+class NetworkServiceClassNameConvention extends DartLintRule {
+  NetworkServiceClassNameConvention() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'incorrect_service_class_name',
+    name: 'network_service_class_name_convention',
     problemMessage: "The class name isn't a correct name for service class. "
-        "Services class should only contains their name without prefixes. Example: Gift, User",
+        "Services class should end with 'Services'. Example: GiftServices",
+      errorSeverity: ErrorSeverity.WARNING
+
   );
 
   @override

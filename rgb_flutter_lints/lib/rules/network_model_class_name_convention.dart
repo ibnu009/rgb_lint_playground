@@ -5,13 +5,14 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/lint_type_constant.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
 
-class CorrectEnumClassName extends DartLintRule {
-  CorrectEnumClassName() : super(code: _code);
+class NetworkModelClassNameConvention extends DartLintRule {
+  NetworkModelClassNameConvention() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'incorrect_enum_class_name',
-    problemMessage: "The class name isn't a correct name for enum class. "
-        "Enum class should only contains their name without prefixes. Example: GiftEnum",
+    name: 'network_model_class_name_convention',
+    problemMessage: "The class name isn't a correct name for model class. "
+        "Model class should only contains their name without prefixes. Example: Gift, User",
+      errorSeverity: ErrorSeverity.WARNING
   );
 
   @override
@@ -31,8 +32,8 @@ class CorrectEnumClassName extends DartLintRule {
           var length = classInstance.nameLength;
           var name = classInstance.name;
 
-          if (fileName.isPathEnum()) {
-            if (!name.isCorrectClassEnumName()) {
+          if (fileName.isPathModel()) {
+            if (!name.isCorrectModelClassName()) {
               reporter.reportErrorForOffset(code, offset, length);
             }
           }
@@ -42,10 +43,10 @@ class CorrectEnumClassName extends DartLintRule {
   }
 
   @override
-  List<Fix> getFixes() => [_RenameEnumsClass()];
+  List<Fix> getFixes() => [_RenameModelClass()];
 }
 
-class _RenameEnumsClass extends DartFix {
+class _RenameModelClass extends DartFix {
   @override
   void run(
     CustomLintResolver resolver,
@@ -60,7 +61,7 @@ class _RenameEnumsClass extends DartFix {
 
       if (classes == null || classes.isEmpty) return;
       var className = classes.first.name;
-      String correctName = className.renameClass(type: LintTypeConstant.enumLint);
+      String correctName = className.rawClassName;
 
       var offset = classes.first.nameOffset;
       var length = classes.first.nameLength;

@@ -1,3 +1,4 @@
+import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import 'package:rgb_flutter_lints/helper/string_extention.dart';
@@ -8,7 +9,9 @@ class PreferNullableModel extends DartLintRule {
   static const _code = LintCode(
     name: 'prefer_nullable_model',
     problemMessage: 'Implement nullable attributes for models',
-    correctionMessage: 'add nullable <ex:String?> to models\'s attributes'
+    correctionMessage: 'add nullable <ex:String?> to models\'s attributes',
+      errorSeverity: ErrorSeverity.WARNING
+
   );
 
   @override

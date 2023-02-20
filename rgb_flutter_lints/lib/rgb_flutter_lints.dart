@@ -1,39 +1,36 @@
 library rgb_flutter_lints;
 
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-import 'package:rgb_flutter_lints/rules/correct_enum_class_name.dart';
-import 'package:rgb_flutter_lints/rules/correct_json_model_implementation.dart';
-import 'package:rgb_flutter_lints/rules/correct_model_annotation.dart';
-import 'package:rgb_flutter_lints/rules/correct_model_class_name.dart';
+import 'package:rgb_flutter_lints/rules/enum_class_name_convention.dart';
+import 'package:rgb_flutter_lints/rules/enum_file_name_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_model_annotation_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_model_class_name_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_model_file_name_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_model_json_implementation_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_service_annotation_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_service_class_name_convention.dart';
+import 'package:rgb_flutter_lints/rules/network_service_file_name_convention.dart';
 import 'package:rgb_flutter_lints/rules/prefer_nullable_model.dart';
 import 'package:rgb_flutter_lints/rules/prefer_single_class_per_file.dart';
-
-import 'rules/correct_enum_file_name.dart';
-import 'rules/correct_model_file_name.dart';
-import 'rules/correct_service_annotation.dart';
-import 'rules/correct_service_class_name.dart';
-import 'rules/correct_service_file_name.dart';
-import 'rules/prefer_final_providers.dart';
 
 PluginBase createPlugin() => _RgbCustomLint();
 
 class _RgbCustomLint extends PluginBase {
   @override
   List<LintRule> getLintRules(CustomLintConfigs configs) => [
-    PreferFinalProviders(),
     PreferSingleClassPerFile(),
 
-    CorrectModelFileName(),
-    CorrectModelAnnotation(),
-    CorrectModelClassName(),
-    CorrectJsonModelImplementation(),
+    NetworkModelFileNameConvention(),
+    NetworkModelAnnotationConvention(),
+    NetworkModelClassNameConvention(),
+    NetworkModelJsonImplementationConvention(),
     PreferNullableModel(),
 
-    CorrectServiceFileName(),
-    CorrectServiceAnnotation(),
-    CorrectServiceClassName(),
+    NetworkServiceAnnotationConvention(),
+    NetworkServiceClassNameConvention(),
+    NetworkServiceFileNameConvention(),
 
-    CorrectEnumFileName(),
-    CorrectEnumClassName(),
+    EnumFileNameConvention(),
+    EnumClassNameConvention(),
   ];
 }
