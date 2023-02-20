@@ -52,6 +52,24 @@ dev_dependencies:
 * [One variable for lang convention](#prefer-one-variable-for-language-convention) 
 
 &nbsp;
+## Example
+
+#### Model Convention Example
+* [Model class name convention example](#model-class-name-convention-example)
+* [Model file name convention example](#model-file-name-convention-example)
+* [Model annotation convention example](#model-annotation-convention-example)
+* [Prefer nullable for models convention example](#prefer-nullable-for-models-convention-example)
+
+#### Service Convention Example
+* [Service class name convention example](#service-class-name-convention-example)
+* [Service file name convention example](#service-file-name-convention-example)
+* [Service annotation convention example](#service-annotation-convention-example)
+
+#### Enum Convention Example
+* [Enum class name convention example](#enum-class-name-convention-example)
+* [Enum file name convention example](#enum-file-name-convention-example)
+
+&nbsp;
 ---
 
 #### Model Convention
@@ -404,7 +422,7 @@ Map<String,String> en = {};
 #### Service file name convention example
 <img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/service_file_convention.png"> </img>
 
-#### Service file name convention example
+#### Service annotation convention example
 <img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/service_annotation_convention.png"> </img>
 
 #### Enum Convention
