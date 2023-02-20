@@ -21,53 +21,34 @@ dev_dependencies:
 
 ## Convention
 
-#### Model Convention
-* [Model class name convention](#model-class-name-convention)
-* [Model file name convention](#model-file-name-convention)
-* [Model annotation convention](#model-annotation-convention)
-* [Prefer nullable for models convention](#prefer-nullable-for-models-convention)
-
-#### Service Convention
-* [Service class name convention](#service-class-name-convention)
-* [Service file name convention](#service-file-name-convention)
-* [Service annotation convention](#service-annotation-convention)
+#### Network Convention
+* [Network model class name convention](#network-model-class-name-convention)
+* [Network model file name convention](#network-model-file-name-convention)
+* [Network model annotation convention](#network-model-annotation-convention)
+* [Network nullable models convention](#network-nullable-for-models-convention)
+* [Network service class name convention](#network-service-class-name-convention)
+* [Network service file name convention](#network-service-file-name-convention)
+* [Network service annotation convention](#network-service-annotation-convention)
+* [Network request class name convention](#network-request-class-name-convention)
+* [Network request file name convention](#network-request-file-name-convention)
+* [Network response class name convention](#network-response-class-name-convention)
+* [Network response file name convention](#network-response-file-name-convention)
+* [Network model json implementation convention](#network_model_json_implementation_convention)
+* [Network base response import convention](#network-base-response-import-convention) 
 
 #### Enum Convention
 * [Enum class name convention](#enum-class-name-convention)
 * [Enum file name convention](#enum-file-name-convention)
 
-#### Request Convention
-* [Request class name convention](#request-class-name-convention)
-* [Request file name convention](#request-file-name-convention)
-
-#### Response Convention
-* [Response class name convention](#response-class-name-convention)
-* [Response file name convention](#response-file-name-convention)
-
 #### Other Convention
 * [Naming Convention](#naming-convention)
 * [Prefer single class per file convention](#prefer-single-class-per-file-convention)    
 * [Prefer static const lang variable convention](#prefer-static-const-lang-variable-convention)    
-* [Base response import convention](#base-response-import-convention) 
-* [One variable for lang convention](#prefer-one-variable-for-language-convention) 
+* [Prefer one variable for lang convention](#prefer-one-variable-for-language-convention) 
+* [Prefer single enum per file convention](#prefer_single_enum_per_file_convention) 
 
 &nbsp;
 ## Example
-
-#### Model Convention Example
-* [Model class name convention example](#model-class-name-convention-example)
-* [Model file name convention example](#model-file-name-convention-example)
-* [Model annotation convention example](#model-annotation-convention-example)
-* [Prefer nullable for models convention example](#prefer-nullable-for-models-convention-example)
-
-#### Service Convention Example
-* [Service class name convention example](#service-class-name-convention-example)
-* [Service file name convention example](#service-file-name-convention-example)
-* [Service annotation convention example](#service-annotation-convention-example)
-
-#### Enum Convention Example
-* [Enum class name convention example](#enum-class-name-convention-example)
-* [Enum file name convention example](#enum-file-name-convention-example)
 
 &nbsp;
 ---
