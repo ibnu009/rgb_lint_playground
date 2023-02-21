@@ -1,4 +1,8 @@
-class TestServices{
-
-  String? mybook;
+enum TestEnum{
+  hehe,
+  haha,
 }
+
+
+
+

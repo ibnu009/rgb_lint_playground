@@ -1,3 +1,4 @@
-class TestServices{
+class TestServicesEnum{
 
 }
+
