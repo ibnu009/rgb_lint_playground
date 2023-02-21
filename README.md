@@ -413,16 +413,18 @@ Map<String,String> en = {};
 #### Network service annotation convention example
 <img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/service_annotation_convention.png"> </img>
 
-#### Network correct request class name
-![image](https://user-images.githubusercontent.com/49750047/220236561-e53cffe5-039e-4963-952e-7374eba859a9.png)
+#### Network correct request class name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/request_class_convention.png"> </img>
 
-#### Network correct request file name
+#### Network request file name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/request_file_convention.png"> </img>
 
-#### Network correct response class name
+#### Network response class name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/response_file_convention.png"> </img>
 
-#### Network correct response file name
+#### Network response file name convention example
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/response_file_convention.png"> </img>
 
-#### Network base response import
 
 #### Enum Convention
 #### Enum class name convention example
@@ -430,6 +432,16 @@ Map<String,String> en = {};
 
 #### Enum file name convention example
 <img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/enum_file_convention.png"> </img>
+
+#### Other Convention
+#### Prefer single class per file convention
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/prefer_single_class.png"> </img>
+
+#### Prefer camel case convention
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/prefer_camel_case_for_variable.png"> </img>
+
+#### Prefer const variable for Lang
+<img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/prefer_const_variable.png"> </img>
 
 ## Frequently Asked Questions
 #### Can this work for java and kotlin languages?
