@@ -28,7 +28,8 @@ class PreferStaticConstLangVariable extends DartLintRule {
     context.registry.addVariableDeclarationList(
       (node) {
         var variables = node.variables;
-        String sourceCode = node.toSource();
+        String sourceCode = resolver.source.uri.path;
+        print("Source lang is $sourceCode");
         if (sourceCode.isPathLang()) {
           for (var variable in variables) {
             if (!variable.isConst) {

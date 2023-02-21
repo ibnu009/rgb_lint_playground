@@ -9,14 +9,14 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
 import '../helper/documentation_constants.dart';
 
-class PreferUpperCamelCase extends DartLintRule {
-  PreferUpperCamelCase() : super(code: _code);
+class PreferPascalCaseConvention extends DartLintRule {
+  PreferPascalCaseConvention() : super(code: _code);
 
   static const _code = LintCode(
-    name: 'prefer_upper_camel_case_convention',
-    problemMessage: "⚠️The type name '{0}' isn't an UpperCamelCase identifier.",
+    name: 'prefer_pascal_case_convention',
+    problemMessage: "⚠️The type name '{0}' isn't an PascalCase identifier.",
     correctionMessage:
-        'Try changing the name to follow the UpperCamelCase style. example: GiftService. \n\n See documentation:\n ${DocumentationConstants.namingConvention}',
+        'Try changing the name to follow the PascalCase style. example: GiftService. \n\n See documentation:\n ${DocumentationConstants.namingConvention}',
     errorSeverity: ErrorSeverity.WARNING,
   );
 

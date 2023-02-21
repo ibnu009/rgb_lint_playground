@@ -41,6 +41,7 @@ class NetworkBaseResponseImportConvention extends DartLintRule {
           var path = declaredElement.source.uri.path;
           if (path.isPathServices()) {
             var classes = declaredElement.classes;
+
             for (var element in classes) {
               for (var field in element.methods) {
                 if (!field.toString().isCorrectUsingBaseResponse()) {
@@ -52,6 +53,9 @@ class NetworkBaseResponseImportConvention extends DartLintRule {
                 }
               }
             }
+
+
+
             var imports = node.directives;
             for (var import in imports) {
               if (import.toString().isCorrectFileBaseResponse()) {

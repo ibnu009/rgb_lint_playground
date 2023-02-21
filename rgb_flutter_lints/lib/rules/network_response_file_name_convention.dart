@@ -32,15 +32,16 @@ class NetworkResponseFileNameConvention extends DartLintRule {
         var declaredElement = node.declaredElement;
         if (declaredElement != null) {
           var path = declaredElement.source.uri.path;
-          var classess = declaredElement.classes;
+          var fileName = declaredElement.source.shortName;
+          var classes = declaredElement.classes;
 
-          for (var classInstance in classess) {
+          for (var classInstance in classes) {
             var offset = classInstance.nameOffset;
             var length = classInstance.nameLength;
 
             if (path.isPathResponse()) {
               if (!path.isCorrectFileResponseName()) {
-                reporter.reportErrorForOffset(_code, offset, length);
+                reporter.reportErrorForOffset(code, offset, length, [fileName]);
               }
             }
           }

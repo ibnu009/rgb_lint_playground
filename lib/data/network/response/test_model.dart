@@ -1,7 +1,5 @@
 
-class Ayam{
-  void printTest(){
-    print('Ayam');
-  }
+
+class TestResponse{
 }
 
