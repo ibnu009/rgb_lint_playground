@@ -413,6 +413,17 @@ Map<String,String> en = {};
 #### Network service annotation convention example
 <img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/service_annotation_convention.png"> </img>
 
+#### Network correct request class name
+![image](https://user-images.githubusercontent.com/49750047/220236561-e53cffe5-039e-4963-952e-7374eba859a9.png)
+
+#### Network correct request file name
+
+#### Network correct response class name
+
+#### Network correct response file name
+
+#### Network base response import
+
 #### Enum Convention
 #### Enum class name convention example
 <img src="https://github.com/ibnu009/rgb_lint_playground/blob/master/resource/enum_class_convention.png"> </img>
