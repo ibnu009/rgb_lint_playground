@@ -2,15 +2,18 @@ import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
+import '../helper/documentation_constants.dart';
+
 class PreferSingleEnumPerFile extends DartLintRule {
   PreferSingleEnumPerFile() : super(code: _code);
 
   static const _code = LintCode(
-      name: 'prefer_single_enum_per_file',
-      problemMessage: '⚠️Theres only should be one enum per file',
-      correctionMessage: 'Move enum to another file \n\n'
-          '',
-      errorSeverity: ErrorSeverity.WARNING);
+    name: 'prefer_single_enum_per_file_convention',
+    problemMessage: '⚠️Theres only should be one enum per file',
+    correctionMessage: 'Move enum to another file \n\n'
+        '"See documentation:\n${DocumentationConstants.preferSingleEnumConvention}"',
+    errorSeverity: ErrorSeverity.WARNING,
+  );
 
   @override
   void run(

@@ -12,8 +12,9 @@ class EnumFileNameConvention extends DartLintRule {
     name: 'enum_file_name_convention',
     problemMessage:
         "⚠️The file name isn't a correct name for enum file. file name should end with '_enum'",
-    correctionMessage: 'Try changing the file name that ends with "_enum". Example: user_enum.dart. \n\n See documentation:\n${DocumentationConstants.enumFileNameConvention}',
-    errorSeverity: ErrorSeverity.WARNING
+    correctionMessage:
+        'Try changing the file name that ends with "_enum". Example: user_enum.dart. \n\n See documentation:\n${DocumentationConstants.enumFileNameConvention}',
+    errorSeverity: ErrorSeverity.WARNING,
   );
 
   @override
@@ -28,7 +29,7 @@ class EnumFileNameConvention extends DartLintRule {
         var fileName = declaredElement.source.uri.path;
         var classes = declaredElement.classes;
 
-        if (classes.isEmpty){
+        if (classes.isEmpty) {
           if (fileName.isPathEnum()) {
             if (!fileName.isCorrectFileEnumName()) {
               reporter.reportErrorForOffset(code, 0, 0);

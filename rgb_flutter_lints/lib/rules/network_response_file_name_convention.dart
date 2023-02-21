@@ -6,6 +6,7 @@ import 'package:analyzer/error/listener.dart';
 import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
+import '../helper/documentation_constants.dart';
 import '../helper/lint_type_constant.dart';
 
 class NetworkResponseFileNameConvention extends DartLintRule {
@@ -15,7 +16,9 @@ class NetworkResponseFileNameConvention extends DartLintRule {
     name: 'network_response_file_name_convention',
     problemMessage:
         "⚠️The file name '{0}' isn't a correct name for response file.",
-    correctionMessage: 'Try changing the name that ends with "_response".',
+    correctionMessage:
+        'Try changing the name that ends with "_response". \n\n "See documentation:\n${DocumentationConstants.responseFileNameConvention}"',
+    errorSeverity: ErrorSeverity.WARNING,
   );
 
   @override
@@ -45,6 +48,7 @@ class NetworkResponseFileNameConvention extends DartLintRule {
       },
     );
   }
+
   @override
   List<Fix> getFixes() => [_RenameResponseClass()];
 }
@@ -52,19 +56,20 @@ class NetworkResponseFileNameConvention extends DartLintRule {
 class _RenameResponseClass extends DartFix {
   @override
   void run(
-      CustomLintResolver resolver,
-      ChangeReporter reporter,
-      CustomLintContext context,
-      AnalysisError analysisError,
-      List<AnalysisError> others,
-      ) {
+    CustomLintResolver resolver,
+    ChangeReporter reporter,
+    CustomLintContext context,
+    AnalysisError analysisError,
+    List<AnalysisError> others,
+  ) {
     context.registry.addCompilationUnit((node) {
       var declaredElement = node.declaredElement;
       var classes = declaredElement?.classes;
 
       if (classes == null || classes.isEmpty) return;
       var className = classes.first.name;
-      String correctName = className.renameClass(type: LintTypeConstant.responseLint);
+      String correctName =
+          className.renameClass(type: LintTypeConstant.responseLint);
 
       var offset = classes.first.nameOffset;
       var length = classes.first.nameLength;

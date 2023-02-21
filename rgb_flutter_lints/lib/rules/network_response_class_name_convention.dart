@@ -5,19 +5,22 @@
 import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:analyzer/source/source_range.dart';
-import 'package:analyzer/src/lint/linter.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
+import '../helper/documentation_constants.dart';
 import '../helper/lint_type_constant.dart';
 
 class NetworkResponseClassNameConvention extends DartLintRule {
   NetworkResponseClassNameConvention() : super(code: _code);
 
   static const _code = LintCode(
-      name: 'network_response_class_name_convention',
-      problemMessage:
-          "⚠️The class name isn't a correct name for response class. Example : 'ExampleResponse'",
-      correctionMessage: 'Try changing the name that ends with "Response".');
+    name: 'network_response_class_name_convention',
+    problemMessage:
+        "⚠️The class name isn't a correct name for response class. Example : 'ExampleResponse'",
+    correctionMessage:
+        'Try changing the name that ends with "Response". \n\n See documentation:\n${DocumentationConstants.responseClassNameConvention}',
+    errorSeverity: ErrorSeverity.WARNING,
+  );
 
   @override
   void run(
@@ -52,6 +55,7 @@ class NetworkResponseClassNameConvention extends DartLintRule {
       },
     );
   }
+
   @override
   List<Fix> getFixes() => [_RenameResponseClassName()];
 }
@@ -59,21 +63,21 @@ class NetworkResponseClassNameConvention extends DartLintRule {
 class _RenameResponseClassName extends DartFix {
   @override
   void run(
-      CustomLintResolver resolver,
-      ChangeReporter reporter,
-      CustomLintContext context,
-      AnalysisError analysisError,
-      List<AnalysisError> others,
-      ) {
+    CustomLintResolver resolver,
+    ChangeReporter reporter,
+    CustomLintContext context,
+    AnalysisError analysisError,
+    List<AnalysisError> others,
+  ) {
     context.registry.addCompilationUnit(
-          (node) {
+      (node) {
         var declaredElement = node.declaredElement;
         var classes = declaredElement?.classes;
 
         if (classes == null || classes.isEmpty) return;
         var className = classes.first.name;
         String correctName =
-        className.renameClass(type: LintTypeConstant.responseLint);
+            className.renameClass(type: LintTypeConstant.responseLint);
 
         var offset = classes.first.nameOffset;
         var length = classes.first.nameLength;
@@ -83,7 +87,7 @@ class _RenameResponseClassName extends DartFix {
           priority: 1,
         );
         changeBuilder.addDartFileEdit(
-              (builder) {
+          (builder) {
             builder.addSimpleReplacement(
               SourceRange(offset, length),
               correctName,

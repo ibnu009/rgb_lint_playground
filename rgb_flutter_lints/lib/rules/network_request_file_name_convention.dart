@@ -2,6 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 import '../../helper/string_extention.dart';
@@ -12,8 +13,11 @@ class NetworkRequestFileNameConvention extends DartLintRule {
 
   static const _code = LintCode(
     name: 'network_request_file_name_convention',
-    problemMessage: "⚠️The file name '{0}' isn't a correct name for request file.",
-    correctionMessage: 'Try changing the name that ends with "_request". \n\n See documentation:\n${DocumentationConstants.requestFileNameConvention}',
+    problemMessage:
+        "⚠️The file name '{0}' isn't a correct name for request file.",
+    correctionMessage:
+        'Try changing the name that ends with "_request". \n\n See documentation:\n${DocumentationConstants.requestFileNameConvention}',
+    errorSeverity: ErrorSeverity.WARNING,
   );
 
   @override
@@ -26,16 +30,17 @@ class NetworkRequestFileNameConvention extends DartLintRule {
       (node) {
         var declaredElement = node.declaredElement;
         if (declaredElement != null) {
+          var fileName = declaredElement.source.shortName;
           var path = declaredElement.source.uri.path;
-          if (path.isCorrectFileLang() && path.isPathLang()) {
-            var variables = declaredElement.topLevelVariables;
-            if (variables.length > 1) {
-              for (int i = 1; i < variables.length; i++) {
-                reporter.reportErrorForOffset(
-                  _code,
-                  variables[i].nameOffset,
-                  variables[i].nameLength,
-                );
+          var classess = declaredElement.classes;
+
+          for (var classInstance in classess) {
+            var offset = classInstance.nameOffset;
+            var length = classInstance.nameLength;
+
+            if (path.isPathRequest()) {
+              if (!path.isCorrectFileRequestName()) {
+                reporter.reportErrorForOffset(code, offset, length, [fileName]);
               }
             }
           }
